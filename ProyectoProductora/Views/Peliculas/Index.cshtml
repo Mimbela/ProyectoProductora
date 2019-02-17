@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProyectoProductora.Models.Peliculas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>DATOS DE LA PRODUCTORA</h2>
+
+<p>
+    @Html.ActionLink("INSERTAR DATOS", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Capitulos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Coste)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Capitulos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prota)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Coste)
+        </td>
+    
+    </tr>
+}
+
+</table>
